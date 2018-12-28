@@ -31,7 +31,7 @@ const stacks = {
   top: null
 };  
 function onScroll(event) {
-  const scrollOffsetTop;
+  let scrollOffsetTop;
   stacks.stack = [];
   // stacks.length = 0;
   // stacks.top = null;
