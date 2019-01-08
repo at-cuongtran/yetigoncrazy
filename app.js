@@ -1,3 +1,6 @@
+let map;
+const COORDINATE_PATTERN = /^([-+]?)([\d]{1,2})(((\.)(\d+)(,)))(\s*)(([-+]?)([\d]{1,3})((\.)(\d+))?)$/;
+
 function initMap() {
   const mapOptions = {
     mapTypeId: 'satellite',
@@ -5,20 +8,18 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-  const mapLayer = new google.maps.KmlLayer({
-    url: "https://www.google.com/maps/d/kml?mid=1lEe_sgnXv9bwxQG2Ea1dBcYBFRIC9gAh",
-    map: map
-  });
+  // const mapLayer = new google.maps.KmlLayer({
+  //   url: "https://www.google.com/maps/d/kml?mid=1lEe_sgnXv9bwxQG2Ea1dBcYBFRIC9gAh",
+  //   map: map
+  // });
 }
 
-let map;
 const markers = [
   [15.92358, 107.57196],
   [15.92706, 107.57069],
   [15.94046, 107.57247],
   [15.94279, 107.5719]
 ];
-
 
 $(document).ready(function () {
   $('#parent').on("scroll", onScroll);
